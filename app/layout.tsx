@@ -1,7 +1,6 @@
 import type React from "react";
 import "../styles/globals.css";
 import type { Metadata } from "next";
-import { ThemeProvider } from "@/components/theme-provider";
 import { Turret_Road } from "next/font/google";
 import { Darker_Grotesque } from "next/font/google";
 
@@ -40,11 +39,9 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${darkerGrotesque.className} ${turret.className} bg-primary-black min-h-screen`}
+        className={`${darkerGrotesque.className} ${turret.className} bg-[#0F0F0F] min-h-screen`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

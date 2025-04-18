@@ -70,7 +70,7 @@ export default function HeroSection() {
             </div>
 
             <div className="col-span-6 lg:col-span-4 row-span-1 bg-[#6843EC]/80 rounded-3xl overflow-hidden">
-              <div className="flex items-center justify-center h-full relative">
+              <div className="flex items-center h-full relative">
                 <div>
                   <img src="/icons/tee.svg" alt="shape" />
                 </div>
@@ -84,37 +84,47 @@ export default function HeroSection() {
             </div>
 
             <div className="col-span-6 lg:col-span-4 row-span-1 bg-[#6843EC] rounded-3xl p-6 lg:w-[calc(100%_+_50px)] lg:-translate-x-40">
-              <h2 className="text-white font-bold text-xl mb-4">
+              <h2 className="text-white font-bold text-xl">
                 We have the best AI image generator
               </h2>
-              <div className="flex items-center gap-2 mt-2">
-                <div className="flex">
-                  <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-white z-40">
+
+              <div className="flex items-center gap-2 w-fit group mt-2">
+                <div className="flex items-center">
+                  <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-white">
                     <img
                       src="/images/hero_pfp1.png"
-                      alt="profile"
-                      className="w-full h-full object-cover"
+                      alt="pfp"
+                      className="w-full h-full object-cover group-hover:grayscale-100 hover:grayscale-0 transition-all duration-300"
                     />
                   </div>
-                  <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-white -ml-2 z-30">
+
+                  <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-white -translate-x-4 group-hover:-translate-x-1 transition-transform duration-300 ease-out cursor-pointer">
                     <img
                       src="/images/hero_pfp2.png"
-                      alt="profile"
-                      className="w-full h-full object-cover"
+                      alt="pfp"
+                      className="w-full h-full object-cover group-hover:grayscale-100 hover:grayscale-0 transition-all duration-300"
                     />
                   </div>
-                  <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-white -ml-2 z-20">
+
+                  <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-white -translate-x-8 group-hover:-translate-x-2 transition-transform duration-300 ease-out cursor-pointer">
                     <img
                       src="/images/hero_pfp3.png"
-                      alt="profile"
-                      className="w-full h-full object-cover"
+                      alt="pfp"
+                      className="w-full h-full object-cover group-hover:grayscale-100 hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
+
+                  <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-white -translate-x-12 group-hover:-translate-x-3 transition-transform duration-300 ease-out cursor-pointer">
+                    <img
+                      src="/images/hero_pfp4.png"
+                      alt="pfp"
+                      className="w-full h-full object-cover group-hover:grayscale-100 hover:grayscale-0 transition-all duration-300"
                     />
                   </div>
                 </div>
-                <p className="text-sm text-white/90">
-                  Join our Community,
-                  <br />
-                  We are waiting for you
+
+                <p className="text-lg text-white/80 font-semibold leading-tight -translate-x-12 group-hover:-translate-x-3 transition-transform duration-300 ease-out">
+                  We've got everything you're looking for you
                 </p>
               </div>
             </div>

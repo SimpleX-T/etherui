@@ -5,15 +5,14 @@ import { Youtube, Podcast } from "lucide-react";
 import CounterAnimation from "./counter-animation";
 
 export default function FeaturesSection() {
-  // Card animation variants
-  const cardVariants = {
-    hidden: { opacity: 0, x: (index: number) => (index === 0 ? -20 : 20) },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.7, ease: "easeOut" },
-    },
-  };
+  // const cardVariants = {
+  //   hidden: { opacity: 0, x: (index: number) => (index === 0 ? -20 : 20) },
+  //   visible: {
+  //     opacity: 1,
+  //     x: 0,
+  //     transition: { duration: 0.7, ease: "easeOut" },
+  //   },
+  // };
 
   // Button animation variants
   const buttonVariants = {
@@ -23,15 +22,13 @@ export default function FeaturesSection() {
 
   return (
     <section className="py-12 px-4 sm:px-8 md:px-16 relative bg-[url('/images/gradient_bg.jpeg')]">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
-        {/* Card 1: Automated Image Synthesis */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto mb-12">
         <motion.div
           custom={0}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          // variants={cardVariants}
-          className="bg-secondary-gray/20 rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-800"
+          className="bg-[#19161C] rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-800"
         >
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Automated Image Synthesis and Design
@@ -64,14 +61,13 @@ export default function FeaturesSection() {
           </div>
         </motion.div>
 
-        {/* Card 2: Create Stunning Visuals */}
         <motion.div
           custom={1}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           // variants={cardVariants}
-          className="bg-secondary-gray/20 rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-800"
+          className="bg-[#19161C] rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-800"
         >
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Create stunning visual in seconds
@@ -101,7 +97,7 @@ export default function FeaturesSection() {
         </motion.div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
