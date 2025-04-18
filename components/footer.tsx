@@ -8,7 +8,7 @@ import { Twitter, Facebook, Instagram, Youtube, Linkedin, Github } from "lucide-
 
 export default function Footer() {
   return (
-    <footer className="py-16 px-8 md:px-16 border-t border-gray-800">
+    <footer className="py-16 px-8 md:px-16 border-t text-white border-gray-800">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -20,12 +20,12 @@ export default function Footer() {
           <h2 className="text-2xl font-bold mb-4">Ether</h2>
           <p className="text-white mb-6">Managed by Artificial Intelligence</p>
           <div className="flex text-white space-x-4">
-            <SocialIcon icon={<Twitter className="h-5 w-5" />} />
-            <SocialIcon icon={<Facebook className="h-5 w-5" />} />
-            <SocialIcon icon={<Instagram className="h-5 w-5" />} />
-            <SocialIcon icon={<Youtube className="h-5 w-5" />} />
-            <SocialIcon icon={<Linkedin className="h-5 w-5" />} />
-            <SocialIcon icon={<Github className="h-5 w-5" />} />
+            <SocialIcon icon={<Twitter className="h-5 w-5 text-white" />} />
+            <SocialIcon icon={<Facebook className="h-5 w-5 text-white" />} />
+            <SocialIcon icon={<Instagram className="h-5 w-5 yext-white" />} />
+            <SocialIcon icon={<Youtube className="h-5 w-5 text-while" />} />
+            <SocialIcon icon={<Linkedin className="h-5 w-5 text-white" />} />
+            <SocialIcon icon={<Github className="h-5 w-5 text-white" />} />
           </div>
         </motion.div>
 
