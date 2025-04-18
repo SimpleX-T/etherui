@@ -7,7 +7,7 @@ const HamburgerToggle = ({
 }) => {
   return (
     <button
-      className="rounded-full p-4 relative w-12 h-12 cursor-pointer"
+      className="rounded-full p-4 relative w-12 h-12 cursor-pointer md:hidden"
       onClick={onClick}
       aria-label="Toggle menu"
     >

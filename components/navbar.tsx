@@ -35,7 +35,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-2xl md:text-3xl font-bold text-primary-white font-turret z-10"
+          className="text-2xl md:text-3xl font-bold text-white font-turret z-10"
         >
           Ether
         </Link>
@@ -47,7 +47,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Hamburger Toggle */}
         <HamburgerToggle
           isOpen={isOpen}
           onClick={toggleMenu}
@@ -87,7 +86,7 @@ export default function Navbar() {
                   >
                     <Link
                       href={item.href}
-                      className="text-primary-white hover:text-primary-purple text-lg font-medium transition-colors"
+                      className="text-white hover:text-primary-purple text-lg font-medium transition-colors"
                       onClick={toggleMenu} // Close menu on link click
                     >
                       {item.label}
@@ -108,7 +107,7 @@ function NavItem({ label }: { label: string }) {
     <div className="relative group">
       <Link
         href={`#${label.toLowerCase()}`}
-        className="text-primary-white hover:text-primary-purple transition-colors flex items-center"
+        className="text-white hover:text-purple-400 transition-colors flex items-center"
       >
         {label}
         <ChevronDown className="ml-1 h-4 w-4" />

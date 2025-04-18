@@ -78,7 +78,7 @@ function SocialIcon({ icon }: { icon: React.ReactNode }) {
 function FooterLink({ href, label }: { href: string; label: string }) {
   return (
     <motion.li whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
-      <Link href={href} className="text-gray-400 hover:text-primary-white transition-colors">
+      <Link href={href} className="text-gray-400 hover:text-white transition-colors">
         {label}
       </Link>
     </motion.li>

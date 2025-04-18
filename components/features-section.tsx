@@ -88,7 +88,7 @@ export default function FeaturesSection() {
               variants={buttonVariants}
               whileHover="hover"
               whileTap="tap"
-              className="bg-secondary-lime text-primary-black font-semibold py-2 px-4 rounded-lg text-sm hover:bg-lime-400 focus:outline-none focus:ring-2 focus:ring-secondary-lime"
+              className="bg-secondary-lime text-black font-semibold py-2 px-4 rounded-lg text-sm hover:bg-lime-400 focus:outline-none focus:ring-2 focus:ring-secondary-lime"
               aria-label="Generate image"
             >
               Generate

@@ -14,7 +14,7 @@ export default function CounterAnimation({
   end,
   suffix = "",
   duration = 2000,
-  className = "text-5xl md:text-7xl font-bold text-primary-purple",
+  className = "text-5xl md:text-7xl font-bold text-purple-400",
 }: CounterProps) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);

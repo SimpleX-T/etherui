@@ -50,7 +50,7 @@ export default function HeroSection() {
           className="mt-12 relative z-10"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:h-[400px]">
-            <div className="col-span-6 relative lg:col-span-5 row-span-2 bg-primary-black rounded-3xl overflow-hidden">
+            <div className="col-span-6 relative lg:col-span-5 row-span-2 bg-black rounded-3xl overflow-hidden">
               <div className="bottom-right-mask h-full w-full">
                 <img
                   src="/images/masked_image.png"
