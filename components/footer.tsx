@@ -18,8 +18,8 @@ export default function Footer() {
           className="col-span-1 md:col-span-2"
         >
           <h2 className="text-2xl font-bold mb-4">Ether</h2>
-          <p className="text-gray-400 mb-6">Managed by Artificial Intelligence</p>
-          <div className="flex space-x-4">
+          <p className="text-white mb-6">Managed by Artificial Intelligence</p>
+          <div className="flex text-white space-x-4">
             <SocialIcon icon={<Twitter className="h-5 w-5" />} />
             <SocialIcon icon={<Facebook className="h-5 w-5" />} />
             <SocialIcon icon={<Instagram className="h-5 w-5" />} />
@@ -78,7 +78,7 @@ function SocialIcon({ icon }: { icon: React.ReactNode }) {
 function FooterLink({ href, label }: { href: string; label: string }) {
   return (
     <motion.li whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
-      <Link href={href} className="text-gray-400 hover:text-white transition-colors">
+      <Link href={href} className="text-white transition-colors">
         {label}
       </Link>
     </motion.li>
