@@ -42,7 +42,7 @@ export default function FeaturesSection() {
               variants={buttonVariants}
               whileHover="hover"
               whileTap="tap"
-              className="flex items-center space-x-2 bg-gray-900 border border-gray-700 rounded-full px-4 py-2 text-white text-sm font-medium hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="cursor-pointer flex items-center space-x-2 bg-gray-900 border border-gray-700 rounded-full px-4 py-2 text-white text-sm font-medium hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500"
               aria-label="Watch on YouTube"
             >
               <Youtube className="h-5 w-5 text-red-500" />
@@ -52,7 +52,7 @@ export default function FeaturesSection() {
               variants={buttonVariants}
               whileHover="hover"
               whileTap="tap"
-              className="flex items-center space-x-2 bg-gray-900 border border-gray-700 rounded-full px-4 py-2 text-white text-sm font-medium hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="cursor-pointer flex items-center space-x-2 bg-gray-900 border border-gray-700 rounded-full px-4 py-2 text-white text-sm font-medium hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-500"
               aria-label="Listen to Podcast"
             >
               <Podcast className="h-5 w-5 text-purple-500" />
@@ -88,7 +88,7 @@ export default function FeaturesSection() {
               variants={buttonVariants}
               whileHover="hover"
               whileTap="tap"
-              className="bg-secondary-lime text-black font-semibold py-2 px-4 rounded-lg text-sm hover:bg-lime-400 focus:outline-none focus:ring-2 focus:ring-secondary-lime"
+              className="text-black font-semibold py-2 px-4 rounded-lg text-sm bg-lime-400 focus:outline-none focus:ring-2 focus:ring-secondary-lime cursor-pointer"
               aria-label="Generate image"
             >
               Generate

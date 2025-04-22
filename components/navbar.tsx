@@ -9,8 +9,22 @@ import Link from "next/link";
 
 // Nav items array for reusability
 const NAV_ITEMS = [
-  { label: "Learn", href: "#learn" },
-  { label: "Build", href: "#build" },
+  {
+    label: "Learn",
+    href: "#learn",
+    subItems: [
+      { label: "Docs", href: "#docs" },
+      { label: "Tutorials", href: "#tutorials" },
+    ],
+  },
+  {
+    label: "Build",
+    href: "#build",
+    subItems: [
+      { label: "SDK", href: "#sdk" },
+      { label: "API", href: "#api" },
+    ],
+  },
   { label: "Product", href: "#product" },
   { label: "Community", href: "#community" },
 ];
@@ -43,7 +57,11 @@ export default function Navbar() {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
           {NAV_ITEMS.map((item) => (
-            <NavItem key={item.label} label={item.label} />
+            <NavItem
+              key={item.label}
+              label={item.label}
+              subItems={item.subItems}
+            />
           ))}
         </div>
 
@@ -102,7 +120,15 @@ export default function Navbar() {
   );
 }
 
-function NavItem({ label }: { label: string }) {
+function NavItem({
+  label,
+  subItems,
+}: {
+  label: string;
+  subItems?: { label: string; href: string }[];
+}) {
+  const hasSubmenu = subItems && subItems.length > 0;
+
   return (
     <div className="relative group">
       <Link
@@ -110,13 +136,33 @@ function NavItem({ label }: { label: string }) {
         className="text-white hover:text-purple-400 transition-colors flex items-center"
       >
         {label}
-        <ChevronDown className="ml-1 h-4 w-4" />
+        {hasSubmenu && (
+          <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" />
+        )}
       </Link>
+
+      {/* Hover underline animation */}
       <motion.div
         initial={{ scaleX: 0 }}
-        whileHover={{ scaleX: 1 }}
-        className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#6843EC] origin-left"
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 0.3 }}
+        className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#6843EC] origin-left scale-x-0 group-hover:scale-x-100 transition-transform"
       />
+
+      {/* Dropdown */}
+      {hasSubmenu && (
+        <div className="absolute top-full left-0 mt-2 w-40 bg-black rounded-md shadow-lg opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transform transition-all duration-200 ease-out z-20">
+          {subItems.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className="block px-4 py-2 text-sm text-white hover:bg-[#6843EC]/20 transition-colors"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

@@ -133,7 +133,7 @@ export default function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-[#D2FF3A] w-full h-full cursor-pointer text-black font-medium rounded-3xl flex items-center justify-center text-xl"
+                className="bg-[#D2FF3A] w-full h-full cursor-pointer text-black font-medium rounded-lg md:rounded-3xl flex items-center justify-center text-xl py-4"
               >
                 Try Free <ArrowUpRight className="ml-2 h-5 w-5" />
               </motion.button>
